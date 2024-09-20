@@ -1,25 +1,17 @@
 ---
-const platform = ['github', 'linkedin']
-const username = ['rdias66', 'rodrigo-dias-45009a242']
+import Social from './Social.astro'
 ---
 
 <footer>
-  <ul>
-    <li>
-      <p>
-        Learn more about my projects on <a
-          href={`https://www.${platform[0]}.com/${username[0]}`}
-          >{platform[0]}</a
-        >!
-      </p>
-    </li>
-    <li>
-      <p>
-        Or talk to me on <a
-          href={`https://www.${platform[1]}.com/in/${username[1]}`}
-          >{platform[1]}</a
-        >!
-      </p>
-    </li>
-  </ul>
+  <Social platform="twitter" username="1deltakream" />
+  <Social platform="github" username="rdias66" />
+  <Social platform="linkedin" username="in/rodrigo-dias-45009a242" />
 </footer>
+
+<style>
+  footer {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+</style>
